@@ -41,21 +41,28 @@
          
 .breadcrumbs
    margin-bottom: 20px
+   +xs
+      margin-bottom: 35px
    ul
       display: flex
+      flex-wrap: wrap
       li
          position: relative
-         &:not(:last-child)
-            margin-right: 65px
-            &::after
+         &:not(:first-child)
+            margin-left: 65px
+            +xs
+               margin-left: 30px
+            &::before
                position: absolute
                top: 50%
                margin-top: -1px
-               left: calc(100% + 26px)
+               right: calc(100% + 26px)
                height: 1px
                width: 10px
                background: #120e0c
                content: ''
+               +xs
+                  right: calc(100% + 11px)
          &.is-active a
             pointer-events: none
             color: #ffc600
@@ -130,6 +137,8 @@
    cursor: default
    +md
       cursor: pointer
+   +xs
+      padding: 20px
    &__img-wrap
       display: flex
       flex-direction: column
@@ -155,6 +164,9 @@
          margin-top: 20px
       &:not(:last-child)
          margin-bottom: 15px
+      strong
+         +f('ms700')
+   
    &__link
       margin-top: 35px
    &__content
@@ -165,10 +177,14 @@
       background: $white
       box-shadow: 0 14px 59px rgba(11, 48, 100, 0.19)
       transition: .3s ease
+      +xs
+         padding: 20px
       #{$parent}:hover &
          opacity: 1
          transform: scale(1.03)
          z-index: 1
+         +xs
+            transform: scale(1)
 
 .arr-link
    $parent: &
@@ -194,6 +210,8 @@
       height: 515px
       border: 1px solid #e1e6ee
       background-color: #ffffff
+      +xs
+         height: 350px
       &.is-active
          display: block
    &__slider
@@ -206,6 +224,8 @@
          justify-content: center
          align-items: center
          height: 515px
+         +xs
+            height: 350px
          img
             max-height: 100%
    &__nav
@@ -227,7 +247,7 @@
             border-right: 0
          &.is-active
             pointer-events: none
-            transform: scale(1.1, 1.2)
+            transform: scale(1.04,1.16)
             box-shadow: 0 14px 43px rgba(255, 201, 14, 0.33)
             background-color: $color-3
             color: $white

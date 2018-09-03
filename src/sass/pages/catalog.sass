@@ -2,6 +2,8 @@
    padding: 25px 0 88px
    &__breadcrumbs
       margin-bottom: 70px
+      +md
+         margin-bottom: 40px
    &__title
       margin-bottom: 32px
    &__filters
@@ -11,31 +13,63 @@
       font-size: 0
       letter-spacing: 0
       padding: 30px 0 80px
+      +md
+         flex-direction: column
+         justify-content: flex-start
+         align-items: flex-start
+         padding: 10px 0 50px
       &-select
          display: inline-block
          vertical-align: middle
          &:not(:nth-child(3n))
             margin-right: 30px
+            +md
+               margin-right: 0
+         &:nth-child(1) ~ &
+            +md
+               margin-top: 30px
          &:nth-child(3) ~ &
             margin-top: 44px
+            +md
+               margin-top: 30px
+         &:nth-child(1)
+            +md
+               order: -2
+         &:nth-child(4)
+            +md
+               order: -1
    &__row
       display: flex
       flex-wrap: wrap
+      +md
+         justify-content: center
    &__item
       flex: 0 0 33.33333%
       max-width: 390px
+      +md
+         flex: 0 0 50%
+         margin: 0 -2px -2px
+      +xs
+         flex: 1 1 100%
       &:not(:nth-child(3n))
          border-right: 0
+         +md
+            border-right: 2px solid #e1e6ee
       &:not(:nth-last-child(-n + 3))
          border-bottom: 0
+         +md
+            border-bottom: 2px solid #e1e6ee
 
 .product
    padding: 25px 0 50px
    color: #4b5666
+   +xs
+      padding: 25px 0 30px
    &__inner
       max-width: 1070px
    &__breadcrumbs
       margin-bottom: 87px
+      
    &__row
       margin: 0 -15px
       +clr
@@ -44,26 +78,50 @@
    &__col
       padding: 0 15px
       width: 510px
+      +sm
       &:nth-child(1)
          float: left
+         +sm
+            float: none
+            margin: 0 auto 50px
+         +xs
+            width: 100%
       &:nth-child(2)
          float: right
+         +sm
+            width: 100%
+            float: none
+            padding: 0 40px
+         +xs
+            padding: 0 15px
+   &__data
+      margin-bottom: 50px
+      +xs
+         margin-bottom: 25px
    &__view-block
    &__features
       display: flex
       flex-wrap: wrap
       margin: 37px -15px 0
+      +xs
+         flex-direction: column
       &-item
          display: flex
          align-items: flex-start
          flex: 0 0 50%
          max-width: 255px
          padding: 0 15px
+         +xs
+            flex: 0 1 auto
+         &:nth-child(1) ~ &
+            +xs
+               padding-top: 30px
          &:nth-child(2) ~ &
             padding-top: 45px
+            +xs
+               padding-top: 30px
          &-icon-wrap
-            flex: 0 0 50px
-            margin-right: 23px
+            flex: 0 0 73px
          p
             font-size: 14px
             line-height: 22px
@@ -75,9 +133,11 @@
       font-size: 32px
       letter-spacing: 0.64px
       line-height: 41px
+      color: $color-1
+      +xs
+         margin-bottom: 20px
    &__price
       display: block
-      margin-bottom: 50px
       +f('ms700', 30, 30)
       color: $color-3
       letter-spacing: 0.6px
@@ -93,8 +153,14 @@
          column-count: 2
          column-gap: 30px
          column-width: 200px
+         +xs
+            column-width: auto
+            column-gap: 0
+            column-count: unset
          li:nth-child(3) ~ li
             margin-left: 40px
+            +xs
+               margin-left: 0
          li
             position: relative
             padding-left: 37px
@@ -110,20 +176,35 @@
                background-color: #8398ad
                content: ''
    &__actions
+      +sm
+         max-width: 470px
+         margin: 0 auto
       &-btn
          width: 100%
+         +xs
+            padding: 25px 17px 25px 20px
          &:not(:last-child)
             margin-bottom: 45px
+            +sm
+               margin-bottom: 20px
             
    &__descr
       margin-top: 110px
+      +sm
+         margin-top: 70px
+      +xs
+         margin-top: 50px
       &-item
          &:not(:last-child)
             margin-bottom: 75px
+            +xs
+               margin-bottom: 35px
       &-title
          margin-bottom: 35px
          +f('ms700', 18, 24)
          letter-spacing: 0.36px
+         +xs
+            margin-bottom: 20px
       &-sub-title
          margin: 50px 0 20px
          +f('ms600')
@@ -137,15 +218,26 @@
       
 .assort
    padding: 50px 0 80px
+   +xs
+      padding: 30px 0 50px
    &__section-top
       margin-bottom: 50px
    &__slider
-      border-right: 2px solid #e1e6ee
+      +xs
+         padding-bottom: 40px
+      .slick-list
+         border-right: 2px solid #e1e6ee
       .slider-btn
          top: 53%
+         +xs
+            top: calc(100% - 10px)
          &_prev
             left: -72px
+            +xs
+               left: 50px
          &_next
             right: -72px
+            +xs
+               right: 50px
    &__item
       border-right: 0

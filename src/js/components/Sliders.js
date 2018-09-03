@@ -41,7 +41,20 @@ class Sliders {
     this.$assortSlider.slick($.extend({}, this.defaultOptions, {
       slidesToShow: 3,
       autoPlay: true,
-      autoplaySpeed: 4000
+      autoplaySpeed: 4000,
+      responsive: [
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     }));
   }
 }

@@ -56,6 +56,8 @@
    display: flex
    align-items: center
    color: #4b5666
+   +xs
+      flex-direction: column
    &__label
       display: inline-block
       vertical-align: middle
@@ -63,6 +65,9 @@
       margin-right: 30px
       font-size: 16px
       letter-spacing: 0.32px
+      +xs
+         display: block
+         margin-bottom: 10px
    
    .select2-container
       font-size: 14px
@@ -98,9 +103,6 @@
    .select2-container .select2-selection--single .select2-selection__rendered
       padding-left: 20px
       padding-right: 40px
-      
-   //.select2-hidden-accessible
-   //   display: none !important
 
 .select2-results
    font-size: 14px !important

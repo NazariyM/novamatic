@@ -1,0 +1,40 @@
+//BEGIN header
++b.HEADER.header(class= headerClass)
+	+e.info
+		+e.info-container.container
+			+b.A.logo.header__logo(href='#!')
+				h1 Novamatic
+				+e.IMG(src='img/other/logo.png' alt='Novamatic')
+			+e.contact
+				+e.A.contact-tel(href='tel:81264567578') 812 645 67 578
+				+e.A.contact-btn(href='#!') ОБРАТНЫЙ ЗВОНОК
+				
+			if headerBurger
+				+e.A.burger-btn(href='#!')
+					+i('burger')
+
+	+e.nav-wrap
+		+e.nav-container.container
+			+e.NAV.nav
+				-
+					navList = [
+					'Каталог',
+					'Решения',
+					'Сервис',
+					'Проектировщикам'
+					]
+				+e.UL
+					for navLink, i in navList
+						li: a(href='#!')= navLink
+
+			+b.search-form.header__search
+				+e.FORM(action='#!' method='POST')
+					+e.INPUT.field(type='text' name='' placeholder='Поиск' required)
+					+e.LABEL.submit-btn
+						+e.INPUT.submit(type='submit' name='' value='')
+						+i('search')
+
+			+e.BUTTON.nav-btn(type='button')
+				+e.nav-btn-burger
+					+e.nav-btn-lines
+//END header

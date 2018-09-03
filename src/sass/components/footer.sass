@@ -1,0 +1,57 @@
+.footer
+   padding: 52px 0 172px
+   background-color: #e4e7ea
+   +md
+      padding: 52px 0 80px
+   +xs
+      padding: 50px 0
+   &__container
+      display: flex
+      align-items: flex-start
+      +sm
+         justify-content: space-between
+      +xs
+         flex-direction: column
+         align-items: flex-start
+   &__logo
+      align-self: flex-end
+      margin-right: 100px
+      +sm
+         margin-right: 0
+      +xs
+         flex: 0 1 auto
+         margin: 0 auto 30px 0
+   &__nav
+      padding: 0 15px
+      +sm
+         margin-left: auto
+         padding: 0
+      +xs
+         margin-left: 0
+      ul
+         column-count: 2
+         column-width: 200px
+         column-gap: 30px
+         +sm
+            column-width: 160px
+         +xs
+            column-width: auto
+            column-gap: 0
+            column-count: unset
+         li
+            &:not(:last-child)
+               margin-bottom: 5px
+               +xs
+                  margin-bottom: 10px
+            &:nth-child(1),
+            &:nth-child(5)
+               margin-bottom: 20px
+               +xs
+                  margin-bottom: 10px
+            a
+               color: #4e5154
+               font-size: 14px
+               letter-spacing: 0.28px
+               +trs
+               &:hover
+                  color: $color-3

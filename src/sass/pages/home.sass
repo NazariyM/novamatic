@@ -1,0 +1,303 @@
+.screen
+   height: 660px
+   color: $white
+   +cover
+   +xs
+      height: auto
+      padding: 50px 0
+   &__container
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      height: 100%
+   &__content
+      max-width: 900px
+   &__title
+      margin-bottom: 70px
+      +sm
+         margin-bottom: 50px
+   &__benefits
+      display: flex
+      max-width: 554px
+      margin-bottom: 85px
+      +sm
+         margin-bottom: 65px
+      +xs
+         margin-bottom: 50px
+         flex-direction: column
+      &-item
+         flex: 0 0 33.33333%
+         padding-right: 15px
+         +xs
+            flex: 0 1 auto
+            padding-right: 0
+         &:not(:last-child)
+            +xs
+               margin-bottom: 30px
+      &-icon
+         &-wrap
+            height: 35px
+            margin-bottom: 25px
+            
+   &__btn
+      +xs
+         width: 100%
+
+.promo
+   padding: 75px 0
+   +xs
+      padding: 50px 0 30px
+   &__container
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      +sm
+         flex-direction: column
+   &__text
+      flex: 0 1 560px
+      padding-right: 30px
+      +sm
+         flex: 1 1 auto
+         padding-right: 0
+         margin-bottom: 30px
+   &__title
+      margin-bottom: 52px
+      +xs
+         margin-bottom: 20px
+   &__descr
+   &__video-block
+      margin-top: 5px
+      flex: 0 1 506px
+      +sm
+         flex: 1 1 auto
+         width: 100%
+         max-width: 506px
+         margin: 0 auto
+
+.choose
+   padding: 63px 0 20px
+   +xs
+      padding: 30px 0 20px
+   &__section-top
+      max-width: 520px
+      margin-bottom: 50px
+      +xs
+         margin-bottom: 35px
+   &__row
+      display: block
+      margin: 0 -5px
+      font-size: 0
+      letter-spacing: 0
+      +md
+         max-width: 880px
+         margin: 0 auto
+         display: flex
+         flex-wrap: wrap
+         justify-content: center
+      +xs
+         flex-direction: column
+         align-items: center
+   &__item
+      width: calc(25% - 10px)
+      min-height: 333px
+      display: inline-block
+      vertical-align: top
+      max-width: 285px
+      margin: 0 5px
+      padding: 40px 15px 57px 35px
+      background-color: #e6ebef
+      +md
+         min-width: 285px
+      &:nth-child(2) ~ &
+         +md
+            margin-top: 10px
+      &:not(:first-child)
+         +xs
+            margin-top: 10px
+      &-title
+         min-height: 96px
+         margin-bottom: 15px
+         +f('ms700', 20, 32)
+         letter-spacing: 0.4px
+         color: $color-2
+      &-descr
+         font-size: 14px
+         letter-spacing: 0.28px
+
+.features
+   padding: 66px 0 142px
+   +sm
+      padding: 60px 0 90px
+   +xs
+      padding: 60px 0
+   &__section-top
+      margin-bottom: 55px
+      +xs
+         margin-bottom: 30px
+   &__row
+      margin: 0 -30px 85px
+      +md
+         margin: 0 -15px 50px
+      +xs
+         margin: 0 -15px 30px
+   &__item
+      flex: 0 0 33.33333%
+      padding: 0 30px
+      max-width: 410px
+      +md
+         padding: 0 15px
+      +sm
+         flex: 0 0 50%
+      +xs
+         flex: 1 1 100%
+      &:nth-child(3)
+         +sm
+            flex: 0 0 100%
+      &:not(:last-child)
+         +sm
+            margin-bottom: 30px
+      &-count
+         margin-bottom: 10px
+         +f('ms800')
+         letter-spacing: 1.2px
+         font-size: 60px
+         line-height: 60px
+         color: $color-3
+      &-title
+         margin-bottom: 20px
+         +f('ms700', 22, 32)
+         letter-spacing: 0.44px
+   &__picture
+      +ratio(1170, 470)
+      +cover-img
+      &::before
+         +xs
+            padding-top: 60%
+      img
+         +coverdiv
+         width: 100%
+         height: 100%
+
+.benefits
+   padding: 117px 0 288px
+   background-color: #f7f7f7
+   +sm
+      padding: 100px 0 270px
+   +xs
+      padding: 60px 0 200px
+   &__section-top
+      margin-bottom: 77px
+      +xs
+         margin-bottom: 40px
+   &__inner
+      max-width: 990px
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      +sm
+         margin: 0 -15px
+   &__item
+      display: flex
+      align-items: flex-start
+      flex: 0 0 395px
+      +sm
+         flex: 0 1 50%
+         padding: 0 15px
+      +xs
+         flex: 1 1 100%
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 30px
+      &:nth-child(2) ~ &
+         margin-top: 55px
+         +xs
+            margin-top: 30px
+      &-icon-wrap
+         flex: 0 0 50px
+         margin-right: 15px
+      &-text
+      &-title
+         margin-bottom: 10px
+         font-size: 20px
+         line-height: 30px
+         letter-spacing: 0.4px
+      &-descr
+         color: #8d93a3
+         
+.contact
+   &_offset
+      padding-bottom: 80px
+      margin-top: -163px
+   &_default
+      padding-bottom: 70px
+   &__block
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 366px
+      padding: 20px 65px 20px 60px
+      overflow: hidden
+      box-shadow: 0 17px 84px rgba(86, 136, 209, 0.25)
+      background-color: #16181a
+      background-image: linear-gradient(-187deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.12) 99%, rgba(255, 255, 255, 0.12) 100%)
+      +sm
+         padding: 20px
+      +xs
+         flex-direction: column
+         height: auto
+         padding: 40px 25px
+      &-img
+         position: absolute
+         top: 0
+         right: 0
+         pointer-events: none
+   &__container
+   &__section-top
+      flex: 0 0 400px
+      color: $white
+      +xs
+         flex: 0 1 auto
+         width: 100%
+      .title
+         margin-bottom: 25px
+         line-height: 53px
+         +xs
+            line-height: 32px
+      p
+         line-height: 31px
+         font-size: 20px
+         letter-spacing: 0.4px
+   &__form
+      position: relative
+      z-index: 1
+      display: flex
+      align-items: flex-end
+      flex: 0 1 570px
+      margin-top: 50px
+      +md
+         flex-direction: column
+      +xs
+         flex: 0 1 auto
+         width: 100%
+         align-items: center
+      &-field
+         &:not(:last-child)
+            margin-right: 50px
+            +md
+               margin-right: 0
+               margin-bottom: 20px
+         &:nth-child(1)
+            flex: 0 0 296px
+            margin-bottom: 6px
+            +md
+               flex: 0 1 auto
+               width: 296px
+            +xs
+               width: 100%
+         &:nth-child(2)
+            flex: 0 0 225px
+            +md
+               flex: 0 1 auto
+               width: 225px
+      

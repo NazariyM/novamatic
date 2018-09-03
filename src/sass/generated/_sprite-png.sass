@@ -1,0 +1,106 @@
+$icons: (0:0)
+$icons: map-merge($icons,('arr-r': (X: -149px, Y:-90px, W: 10px, H: 16px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('assembly-line': (X: -96px, Y:0px, W: 43px, H: 31px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('award': (X: 0px, Y:-47px, W: 34px, H: 40px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('customer': (X: -49px, Y:0px, W: 37px, H: 37px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('like': (X: -96px, Y:-41px, W: 34px, H: 35px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('plug': (X: 0px, Y:-97px, W: 33px, H: 33px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('smartphone': (X: -149px, Y:-44px, W: 22px, H: 36px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('support': (X: 0px, Y:0px, W: 39px, H: 37px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('trophy': (X: -149px, Y:0px, W: 28px, H: 34px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('truck': (X: -44px, Y:-47px, W: 39px, H: 28px, TW: 177px, TH: 130px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+
+.icon-arr-r
+  width: 10px
+  height: 16px
+  background-image: url('../img/sprite.png')
+  background-position: -149px -90px
+
+.icon-assembly-line
+  width: 43px
+  height: 31px
+  background-image: url('../img/sprite.png')
+  background-position: -96px 0px
+
+.icon-award
+  width: 34px
+  height: 40px
+  background-image: url('../img/sprite.png')
+  background-position: 0px -47px
+
+.icon-customer
+  width: 37px
+  height: 37px
+  background-image: url('../img/sprite.png')
+  background-position: -49px 0px
+
+.icon-like
+  width: 34px
+  height: 35px
+  background-image: url('../img/sprite.png')
+  background-position: -96px -41px
+
+.icon-plug
+  width: 33px
+  height: 33px
+  background-image: url('../img/sprite.png')
+  background-position: 0px -97px
+
+.icon-smartphone
+  width: 22px
+  height: 36px
+  background-image: url('../img/sprite.png')
+  background-position: -149px -44px
+
+.icon-support
+  width: 39px
+  height: 37px
+  background-image: url('../img/sprite.png')
+  background-position: 0px 0px
+
+.icon-trophy
+  width: 28px
+  height: 34px
+  background-image: url('../img/sprite.png')
+  background-position: -149px 0px
+
+.icon-truck
+  width: 39px
+  height: 28px
+  background-image: url('../img/sprite.png')
+  background-position: -44px -47px

@@ -1,0 +1,172 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Главная'
+	-headerClass = '_gray'
+
+block content
+
+	+b.main
+
+		//begin screen
+		+b.SECTION.screen(style='background-image: url(img/bg/screen_bg.jpg)')
+			+e.container.container
+				+e.content
+					+e.H2.title.title ШКАФЫ-ЛОКЕРЫ С ДОСТУПОМ ПО ПЕРСОНАЛЬНЫМ ИДЕНТИФИКАТОРАМ
+					+e.benefits
+						+e.benefits-item
+							+e.benefits-icon-wrap
+								+e.benefits-icon.icon-like
+							+e.P Удобство использования
+						+e.benefits-item
+							+e.benefits-icon-wrap
+								+e.benefits-icon.icon-smartphone
+							+e.P Автоматическое управление
+						+e.benefits-item
+							+e.benefits-icon-wrap
+								+e.benefits-icon.icon-plug
+							+e.P Зарядка телефонов и планшетов
+
+					+b.A.btn._yellow._has-icon.screen__btn(href='#!') В каталог
+						+e.icon.icon-arr-r
+		//end screen
+
+
+		//begin promo
+		+b.SECTION.promo
+			+e.container.container
+				+e.text
+					+e.H2.title.title Локеры NOVAMATIC
+					+e.P.descr Локеры - это удобные шкафчики для безопасного хранения личных вещей. Они запираются на электромеханический замок, который открывается бесконтактными RFID идентификаторами (карты, брелоки, браслеты) или с помощью биометрического сканера отпечатка пальца. Шкафчики оборудованы портами для зарядки мобильных устройств и различными аксессуарами для удобства хранения.
+				+b.video-block.promo__video-block
+					+e.inner
+						+e.BUTTON.play-btn(type='button')
+							+i('play', 'video-block__play-btn-icon')
+						+e.VIDEO.video(playsinline='playsinline' loop='loop' preload='auto')
+							source(src='video/video-sample.mp4' type='video/mp4')
+					+e.P.descr О локерах
+		//end promo
+
+		//begin choose
+		+b.SECTION.choose
+			+e.container.container
+				+b.section-top.choose__section-top
+					+e.H6.label КАК ВЫБРАТЬ
+					+e.H2.title.title Локеры
+					+e.P.descr Локеры NOVAMATIC различаются по типу корпуса – металлические или ЛДСП, по виду используемых идентификаторов RFID или FP, по принципу применения – коллективные или персональные, а также по размеру и количеству ячеек.
+				+e.row.row
+					+e.item
+						+e.H4.item-title Металлические
+							br
+							| или из LDSP?
+						+e.P.item-descr Локеры NOVAMATIC различаются по типу корпуса – металлические или ЛДСП, по виду используемых идентификаторо
+					+e.item
+						+e.H4.item-title Со считывателями RFID или с биосканерами?
+						+e.P.item-descr Локеры NOVAMATIC различаются по типу корпуса – металлические или ЛДСП, по виду используемых идентификаторо
+					+e.item
+						+e.H4.item-title Персональные или для коллективного использования?
+						+e.P.item-descr Локеры NOVAMATIC различаются по типу корпуса – металлические или ЛДСП, по виду используемых идентификаторо
+					+e.item
+						+e.H4.item-title Габариты и количество ячеек
+						+e.P.item-descr Локеры NOVAMATIC различаются по типу корпуса – металлические или ЛДСП, по виду используемых идентификаторо
+		//end choose
+
+		//begin features
+		+b.SECTION.features
+			+e.container.container
+				+b.section-top.features__section-top
+					+e.H6.label НАШИ
+					+e.H2.title.title Особенности
+
+				+e.row.row
+					+e.item
+						+e.item-count 1
+						+e.item-title Гибкая модульная
+							br
+							| система
+						+e.P.descr Независимо от типов и видов шкафчиков, гибкая модульная система локеров NOVAMATIC всегда остается переменной по высоте и бесконечно расширяемой по ширине.
+					+e.item
+						+e.item-count 2
+						+e.item-title Элегантный дизайн
+							br
+							| система
+						+e.P.descr Современный дизайн и переменная цветовая палитра обеспечивают привлекательную интеграцию в существующие концепции помещений. По умолчанию, все локеры NOVAMATIC поставляются в стандартных цветовых исполнениях. Эти сочетания цветов проверены нами на практике и выглядят мягко и спокойно. Однако, по запросу, локеры всех типоразмеров могут быть выполнены в любом цветовом сочетании согласно представленному каталогу.
+					+e.item
+						+e.item-count 3
+						+e.item-title Безопасность
+							br
+							| система
+						+e.P.descr Все локеры очень безопасны и просты в использовании. Разблокировка замка происходит одним прикосновением к считывателю бесконтактного идентификатора или сканеру отпечатка пальца. Считыватели и биосканеры снабжены цветовым индикатором для отображения состояния локера.
+							br
+							| В случае поломки замка или отсутствия электричества в здании любой локер можно механически разблокировать мастер-ключом, находящимся у ответственного лица.
+						
+				+e.picture
+					+e.IMG(src='img/content/features_img.jpg' alt='image')
+		//end features
+
+		//begin benefits
+		+b.SECTION.benefits
+			+e.container.container
+				+b.section-top.benefits__section-top
+					+e.H6.label ПРИНЦИПЫ И
+					+e.H2.title.title Преимущества
+				+e.inner
+					+e.item
+						+e.item-icon-wrap
+							+e.item-icon-wrap.icon-truck
+						+e.item-text
+							+e.H6.item-title Бесплатная доставка
+							+e.P.item-descr Доставляем нашу продукцию во все города России совершенно бесплатно
+
+					+e.item
+						+e.item-icon-wrap
+							+e.item-icon-wrap.icon-assembly-line
+						+e.item-text
+							+e.H6.item-title Современное производство
+							+e.P.item-descr Мы используем самую современную модель сборочного производства продукции
+
+					+e.item
+						+e.item-icon-wrap
+							+e.item-icon-wrap.icon-award
+						+e.item-text
+							+e.H6.item-title 5 лет гарантиии
+							+e.P.item-descr Мы предоставляем гарантию на нашу продукцию до 5 лет
+
+					+e.item
+						+e.item-icon-wrap
+							+e.item-icon-wrap.icon-trophy
+						+e.item-text
+							+e.H6.item-title Совершенствование качества
+							+e.P.item-descr Мы делаем все, чтобы качество нашей продукции постоянно улучшалось
+
+					+e.item
+						+e.item-icon-wrap
+							+e.item-icon-wrap.icon-support
+						+e.item-text
+							+e.H6.item-title Онлайн-поддержка
+							+e.P.item-descr У каждого клиента есть возможность обратиться к нам по любому вопросу
+
+					+e.item
+						+e.item-icon-wrap
+							+e.item-icon-wrap.icon-customer
+						+e.item-text
+							+e.H6.item-title Качественный сервис
+							+e.P.item-descr У каждого клиента есть возможность обратиться к нам по любому вопросу
+		//end benefits
+
+		//begin contact
+		+b.SECTION.contact._offset
+			+e.container.container
+				+e.block
+					+e.IMG.block-img(src='img/bg/contact_bg.png' alt='image')
+					+b.section-top.contact__section-top
+						+e.H6.label КОНТАКТЫ
+						+e.H2.title.title Оставьте ваш телефон
+						+e.P.descr И наш менеджер свяжется с вами на протяжении 3х минут
+
+					+e.FORM.form(action='#!' method='POST')
+						+b.form-field.contact__form-field
+							+e.INPUT.input(type='text' name='' placeholder='Телефон' required)
+						+b.form-field.contact__form-field
+							+e.INPUT.submit.btn._yellow(type='submit' value='Отправить')
+		//end contact

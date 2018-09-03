@@ -1,0 +1,70 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Главная'
+	-headerClass = '_white'
+	-headerBurger = true
+
+block content
+
+	+b.main
+
+		//begin about
+		+b.SECTION.about
+			+e.container.container
+				//begin breadcrumbs
+				.breadcrumbs.about__breadcrumbs
+					ul
+						li
+							a(href='#!') ГЛАВНАЯ
+						li.is-active
+							a(href='#!') О КОМПАНИИ
+				//end breadcrumbs
+				+e.info
+					+b.section-top.about__section-top
+						+e.H6.label Наша
+						+e.H2.title.title Компания
+						+e.P.descr Компания CARDDEX начала свою деятельность в 2005 году, объединив в рабочую группу профессионалов в области разработки электроники и механики, программного обеспечения и системного построения.
+						+e.P.descr Наша компания специализируется на разработке, проектировании и создании программно-аппаратных продуктов и решений для систем контроля.
+						+e.P.descr Мы с гордостью можем отнести себя к одной из немногочисленных российских компаний, имеющих полный цикл разработки собственных изделий и программ, используя при этом современную эффективную модель сборочного производства.
+					+e.info-block
+						+e.info-item
+							+e.info-item-count 320
+							+e.P человек в штате компании
+						+e.info-item
+							+e.info-item-count 2005
+							+e.P год начала работы компании
+						+e.info-item
+							+e.info-item-count 1 000
+							+e.P довольных клиентов к нам возвращаются
+						+e.info-item
+							+e.info-item-count 5 000
+							+e.P единиц продукции продано
+
+				+b.gallery.about__gallery
+					+e.H2.title.title Лучшая история компании - галерея наших работ
+
+					+e.inner
+						-i = 0
+						while i < 8
+							+e.A.item(data-fancybox='about-gallery' href='img/content/about-gallery_lg.jpg')
+								+e.IMG(src='img/content/about-gallery_img.jpg' alt='image')
+							-i++
+		//end about
+
+		//begin contact
+		+b.SECTION.contact._default
+			+e.container.container
+				+e.block
+					+e.IMG.block-img(src='img/bg/contact_bg.png' alt='image')
+					+b.section-top.contact__section-top
+						+e.H6.label КОНТАКТЫ
+						+e.H2.title.title Оставьте ваш телефон
+						+e.P.descr И наш менеджер свяжется с вами на протяжении 3х минут
+
+					+e.FORM.form(action='#!' method='POST')
+						+b.form-field.contact__form-field
+							+e.INPUT.input(type='text' name='' placeholder='Телефон' required)
+						+b.form-field.contact__form-field
+							+e.INPUT.submit.btn._yellow(type='submit' value='Отправить')
+		//end contact

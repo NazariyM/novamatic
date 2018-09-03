@@ -1,0 +1,39 @@
+//fonts
+=font($alias, $name)
+	@font-face
+		font-family: $alias
+		src: url("../fonts/" + $name + ".eot")
+		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+
++font('Montserrat-Bold', 'Montserrat-Bold')
++font('Montserrat-Italic', 'Montserrat-Italic')
++font('Montserrat-Regular', 'Montserrat-Regular')
++font('Montserrat-Medium', 'Montserrat-Medium')
++font('Montserrat-SemiBold', 'Montserrat-SemiBold')
++font('Montserrat-ExtraBold', 'Montserrat-ExtraBold')
+
+=f($name, $font-size: null, $line-height: null, $letter-spacing: null)
+	$font-family: null
+	@if $name == "ms700"
+		$font-family: "Montserrat-Bold"
+	@if $name == "ms400i"
+		$font-family: "Montserrat-Italic"
+	@if $name == "ms400"
+		$font-family: "Montserrat-Regular"
+	@if $name == "ms500"
+		$font-family: "Montserrat-Medium"
+	@if $name == "ms600"
+		$font-family: "Montserrat-SemiBold"
+	@if $name == "ms800"
+		$font-family: "Montserrat-ExtraBold"
+	font-family: $font-family, Arial, sans-serif
+	@if $font-family != null
+		font-weight: normal
+	@if $font-size != null
+		font-size: $font-size * 1px
+	@if $line-height != null
+		line-height: $line-height * 1px
+	@if $letter-spacing != null
+		letter-spacing: ($letter-spacing / 1000) * 1em

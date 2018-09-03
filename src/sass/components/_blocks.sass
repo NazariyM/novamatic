@@ -2,7 +2,7 @@
    flex: 0 0 307px
    +cover-img
    +xs
-   flex: 0 0 160px
+      flex: 0 0 160px
    h1
       +hide-text
    
@@ -63,6 +63,7 @@
             font-size: 12px
             letter-spacing: 1.2px
             color: #120e0c
+            text-transform: uppercase
             +trs
             &:hover
                color: #ffc600
@@ -118,3 +119,115 @@
             margin-top: 16px
       &:nth-child(4) ~ &
          margin-top: 16px
+
+.product-item
+   $parent: &
+   position: relative
+   min-height: 465px
+   padding: 20px 50px
+   background: $white
+   border: 2px solid #e1e6ee
+   cursor: default
+   +md
+      cursor: pointer
+   &__img-wrap
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      height: 300px
+      img
+         max-height: 100%
+      
+   &__title
+      margin-bottom: 15px
+      +f('ms500', 16, 26)
+      letter-spacing: 0.32px
+   &__price
+      +f('ms700')
+      line-height: 26px
+      color: $color-3
+   &__descr
+      font-size: 14px
+      line-height: 22px
+      letter-spacing: 0.28px
+      &:first-child
+         margin-top: 20px
+      &:not(:last-child)
+         margin-bottom: 15px
+   &__link
+      margin-top: 35px
+   &__content
+      opacity: 0
+      transform: scale(.6)
+      +coverdiv
+      padding: 50px
+      background: $white
+      box-shadow: 0 14px 59px rgba(11, 48, 100, 0.19)
+      transition: .3s ease
+      #{$parent}:hover &
+         opacity: 1
+         transform: scale(1.03)
+         z-index: 1
+
+.arr-link
+   $parent: &
+   display: flex
+   align-items: center
+   &:hover
+      span
+         color: darken(#7c8695, 15)
+      .arrow-link__icon
+         animation: arrRightMove .3s ease
+   span
+      font-size: 14px
+      color: #7c8695
+      margin-right: 20px
+      letter-spacing: 0.28px
+      +trs
+   &__icon
+
+.view-block
+   &__items
+   &__item
+      display: none
+      height: 515px
+      border: 1px solid #e1e6ee
+      background-color: #ffffff
+      &.is-active
+         display: block
+   &__slider
+      .slider-btn
+         top: 54%
+      &-item
+      &-img-wrap
+         display: flex
+         flex-direction: column
+         justify-content: center
+         align-items: center
+         height: 515px
+         img
+            max-height: 100%
+   &__nav
+      display: flex
+      &-btn
+         display: flex
+         align-items: center
+         justify-content: center
+         flex: 0 0 33.33333%
+         height: 57px
+         color: #8398ad
+         +f('ms700')
+         font-size: 20px
+         letter-spacing: 0.4px
+         line-height: 26px
+         border: 1px solid #e1e6ee
+         +trs
+         &:not(:last-child)
+            border-right: 0
+         &.is-active
+            pointer-events: none
+            transform: scale(1.1, 1.2)
+            box-shadow: 0 14px 43px rgba(255, 201, 14, 0.33)
+            background-color: $color-3
+            color: $white

@@ -1,2 +1,22 @@
+.slider
+   display: none
+   &.slick-initialized
+      display: block
+
 .slider-btn
-.slider-dots
+   position: absolute
+   top: 50%
+   margin-top: -14px
+   z-index: 1
+   &:hover
+      svg
+         fill: $color-3
+   &_prev
+      left: 30px
+   &_next
+      right: 30px
+   svg
+      width: 35px
+      height: 28px
+      fill: #8b99a6
+      +trs

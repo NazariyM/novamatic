@@ -3,9 +3,8 @@ import { svgIcon } from '../_helpers';
 
 class Sliders {
   constructor() {
-    this.$screenSlider = $('.screen__slider');
-    this.$prodSlider = $('.prod-slider');
-    // this.$productView = $('.product__view');
+    this.$slider = $('.js-slider');
+    this.$assortSlider = $('.assort__slider');
 
     const iconLeft = svgIcon('sld-arr-l');
     const iconRight = svgIcon('sld-arr-r');
@@ -30,43 +29,21 @@ class Sliders {
   }
 
   init() {
-    if (this.$screenSlider.length) this.initScreenSlider();
-    if (this.$prodSlider.length) this.initProdSlider();
-    // if (this.$productView.length) this.initProdView();
+    if (this.$slider.length) this.initSlider();
+    if (this.$assortSlider.length) this.initAssortSld();
   }
 
-  initScreenSlider() {
-    this.$screenSlider.slick($.extend({}, this.defaultOptions, {
-      dotsClass: 'screen__slider-dots slider-dots',
-      dots: true,
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 3000
+  initSlider() {
+    this.$slider.slick($.extend({}, this.defaultOptions));
+  }
+
+  initAssortSld() {
+    this.$assortSlider.slick($.extend({}, this.defaultOptions, {
+      slidesToShow: 3,
+      autoPlay: true,
+      autoplaySpeed: 4000
     }));
   }
-
-  initProdSlider() {
-    this.$prodSlider.slick($.extend({}, this.defaultOptions));
-  }
-
-  // initProdView() {
-  //   this.$productView.each((i, el) => {
-  //     const $viewImg = $(el).find('.product__view-img');
-  //     const $viewThumbs = $(el).find('.product__view-thumbs');
-  //
-  //     $viewImg.slick($.extend({}, this.defaultOptions, {
-  //       asNavFor: $viewThumbs,
-  //       infinite: false,
-  //       speed: 400
-  //     }));
-  //     $viewThumbs.slick($.extend({}, this.defaultOptions, {
-  //       asNavFor: $viewImg,
-  //       slidesToShow: 4,
-  //       focusOnSelect: true,
-  //       infinite: false
-  //     }));
-  //   });
-  // }
 }
 
 export default new Sliders();

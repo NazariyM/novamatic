@@ -1,0 +1,128 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Каталог'
+	-headerClass = '_white'
+	-headerBurger = true
+
+block content
+
+	+b.main
+
+		//begin catalog
+		+b.SECTION.catalog
+			+e.container.container
+				.breadcrumbs.catalog__breadcrumbs
+					ul
+						li
+							a(href='#!') ГЛАВНАЯ
+						li.is-active
+							a(href='#!') Каталог
+				+e.H2.title.title Каталог
+				+e.filters
+					+b.select._lg.catalog__filters-select
+						+e.SPAN.label Сортировать по
+						+b.SELECT.js-custom-select
+							option цене по возрастанию
+							option цене по убыванию
+							option по рейтингу
+
+					+b.select._xs.catalog__filters-select
+						+e.SPAN.label Кол-во ячеек
+						+b.SELECT.js-custom-select
+							option 4
+
+					+b.select._sm.catalog__filters-select
+						+e.SPAN.label Материал
+						+b.SELECT.js-custom-select
+							option Металл
+
+					+b.select._md.catalog__filters-select
+						+e.SPAN.label Принципу использования
+						+b.SELECT.js-custom-select
+							option персональные
+
+					+b.select._xs.catalog__filters-select
+						+e.SPAN.label Габаритам
+						+b.SELECT.js-custom-select
+							option S
+
+					+b.select._md.catalog__filters-select
+						+e.SPAN.label Назначению
+						+b.SELECT.js-custom-select
+							option Школьные
+
+					+b.select._md.catalog__filters-select
+						+e.SPAN.label Идентификатором
+						+b.SELECT.js-custom-select
+							option RFID
+				+e.row
+					-i = 0
+					while i < 3
+						+b.product-item.catalog__item
+							+e.img-wrap
+								+e.IMG(src='img/content/product-img_sm-2.png' alt='image')
+							+e.H6.title Блоки персональных локеров серии «LS-02A»
+							+e.H5.price 23 050 руб
+							+e.content
+								+e.H6.title Блоки персональных локеров серии «LS-02A»
+								+e.H5.price 23 050 руб
+								+e.P.descr Блоки персональных автоматических шкафчиков-локеров серии «LS-02A» предназначены для коммерческого использования в образовательных учреждениях.
+								+e.P.descr
+									strong Комплектация:
+									= ' '
+									| блоки персональных автоматических шкафчиков-локеров серии «LS-02A»
+								+e.A.link.arr-link(href='#!')
+									span Смотреть в каталоге
+									.arrow-link__icon.icon-arr-sm
+						+b.product-item.catalog__item
+							+e.img-wrap
+								+e.IMG(src='img/content/product-img_sm-1.png' alt='image')
+							+e.H6.title Блоки персональных локеров серии «LS-02A»
+							+e.H5.price 23 050 руб
+							+e.content
+								+e.H6.title Блоки персональных локеров серии «LS-02A»
+								+e.H5.price 23 050 руб
+								+e.P.descr Блоки персональных автоматических шкафчиков-локеров серии «LS-02A» предназначены для коммерческого использования в образовательных учреждениях.
+								+e.P.descr
+									strong Комплектация:
+									= ' '
+									| блоки персональных автоматических шкафчиков-локеров серии «LS-02A»
+								+e.A.link.arr-link(href='#!')
+									span Смотреть в каталоге
+									.arrow-link__icon.icon-arr-sm
+						+b.product-item.catalog__item
+							+e.img-wrap
+								+e.IMG(src='img/content/product-img_sm-2.png' alt='image')
+							+e.H6.title Блоки персональных локеров серии «LS-02A»
+							+e.H5.price 23 050 руб
+							+e.content
+								+e.H6.title Блоки персональных локеров серии «LS-02A»
+								+e.H5.price 23 050 руб
+								+e.P.descr Блоки персональных автоматических шкафчиков-локеров серии «LS-02A» предназначены для коммерческого использования в образовательных учреждениях.
+								+e.P.descr
+									strong Комплектация:
+									= ' '
+									| блоки персональных автоматических шкафчиков-локеров серии «LS-02A»
+								+e.A.link.arr-link(href='#!')
+									span Смотреть в каталоге
+									.arrow-link__icon.icon-arr-sm
+						-i++
+		//end catalog
+
+		//begin contact
+		+b.SECTION.contact._catalog
+			+e.container.container
+				+e.block
+					+e.IMG.block-img(src='img/bg/contact_bg.png' alt='image')
+					+b.section-top.contact__section-top
+						+e.H6.label КОНТАКТЫ
+						+e.H2.title.title Оставьте ваш телефон
+						+e.P.descr И наш менеджер свяжется с вами на протяжении 3х минут
+
+					+e.FORM.form(action='#!' method='POST')
+						+b.form-field.contact__form-field
+							+e.INPUT.input(type='text' name='' placeholder='Телефон' required)
+						+b.form-field.contact__form-field
+							+e.INPUT.submit.btn._yellow(type='submit' value='Отправить')
+		//end contact

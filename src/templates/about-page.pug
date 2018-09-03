@@ -1,7 +1,7 @@
 extends layouts/_layout
 
 block variables
-	-title = 'Главная'
+	-title = 'О компании'
 	-headerClass = '_white'
 	-headerBurger = true
 
@@ -12,14 +12,12 @@ block content
 		//begin about
 		+b.SECTION.about
 			+e.container.container
-				//begin breadcrumbs
 				.breadcrumbs.about__breadcrumbs
 					ul
 						li
 							a(href='#!') ГЛАВНАЯ
 						li.is-active
 							a(href='#!') О КОМПАНИИ
-				//end breadcrumbs
 				+e.info
 					+b.section-top.about__section-top
 						+e.H6.label Наша

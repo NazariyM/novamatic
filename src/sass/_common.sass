@@ -49,7 +49,6 @@ body
    line-height: 24px
    letter-spacing: 1.28px
    transition: .4s ease
-   
    &_has-icon
       position: relative
       min-width: 322px
@@ -64,9 +63,29 @@ body
       background-color: $color-3
       &:hover
          box-shadow: none
+   &_transparent
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 25px 17px 25px 50px
+      border: 1px solid rgba(#8398ad, .4)
+      background: transparent
+      &:hover
+         border-color: #8398ad
    &__icon
       position: absolute
       top: 50%
       right: 30px
       z-index: 1
       margin-top: -8px
+   &__down-arr
+      margin-left: 10px
+      transform: rotate(90deg)
+      fill: #123e7d
+      #{$parent}:hover &
+          animation: arrDownMove .3s .3s ease
+   &__label
+      display: flex
+      align-items: center
+      +f('ms700', 16, 16)
+      letter-spacing: 1.28px

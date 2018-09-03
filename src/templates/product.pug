@@ -1,0 +1,215 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Карта товара'
+	-headerClass = '_white'
+	-headerBurger = true
+
+block content
+
+	+b.main
+
+		//begin product
+		+b.SECTION.product
+			+e.container.container
+				.breadcrumbs.product__breadcrumbs
+					ul
+						li
+							a(href='#!') ГЛАВНАЯ
+						li
+							a(href='#!') Каталог
+						li.is-active
+							a(href='#!') Блоки персональных локеров
+
+				+e.inner
+					+e.row
+						+e.col
+							+b.view-block.product__view-block
+								+e.items
+									+e.item
+										.div 3D
+									+e.item.is-active
+										+e.slider.js-slider.slider
+											+e.slider-item
+												+e.slider-img-wrap
+													+e.IMG(src='img/content/product-img_lg.png' alt='image')
+											+e.slider-item
+												+e.slider-img-wrap
+													+e.IMG(src='img/content/product-img_lg.png' alt='image')
+									+e.item
+										.div Схема
+								+e.nav
+									+e.BUTTON.nav-btn(type='button') 3D
+									+e.BUTTON.nav-btn.is-active(type='button')
+										+e.nav-btn-icon.icon-photo-camera
+									+e.BUTTON.nav-btn(type='button')
+										+e.nav-btn-icon.icon-sketch
+
+						+e.col
+							+e.H2.title.title Блоки коллективных локеров серии «LDL-06N»
+							+e.SPAN.price 23 050 руб
+							+e.info
+								+e.info-item
+									+e.H5.info-title Особенности
+									+e.UL.info-list
+										li Шесть секций
+										li Встроенный считыватель
+										li Встроенный дисплей
+										li Механическая разблокировка
+										li Гарантия 12 мес
+								+e.info-item
+									+e.H5.info-title Технические характеристики
+									+e.UL.info-list
+										li Шесть секций
+										li Встроенный считыватель
+										li Встроенный дисплей
+										li Механическая разблокировка
+										li Гарантия 12 мес
+
+					+e.row
+						+e.col
+							+e.features
+								+e.features-item
+									+e.features-item-icon-wrap
+										+e.features-item-icon
+											.icon-network
+									+e.P Коллективное использование
+								+e.features-item
+									+e.features-item-icon-wrap
+										+e.features-item-icon
+											.icon-plug_gray
+									+e.P Зарядка телефонов и планшетов
+								+e.features-item
+									+e.features-item-icon-wrap
+										+e.features-item-icon
+											.icon-id-card
+									+e.P Управление с помощью идентификаторов
+								+e.features-item
+									+e.features-item-icon-wrap
+										+e.features-item-icon
+											.icon-hand
+									+e.P Для коммерческого применения
+						+e.col
+							+e.actions
+								+e.A.actions-btn.btn._yellow._has-icon(href='#!') В корзину
+									.btn__icon.icon-arr-r
+								+e.A.actions-btn.btn._transparent._has-icon(href='#!') Документация
+									span.btn__label PDF
+										+i('sld-arr-r', 'btn__down-arr')
+
+					+e.descr
+						+e.descr-item
+							+e.H5.descr-title Описание
+							+e.descr-text
+								p Блоки автоматических шкафчиков-локеров серии «LDL-06A» предназначены для коллективного коммерческого использования в общеобразовательных учреждениях, фитнес-центрах, бассейнах и аквапарках, а также везде, где требуется временное хранение личных вещей.
+								p Эти блоки состоят из 6 секций и специально спроектированы с целью хранения пользователями верхней одежды, сменной обуви и т.п. Важной функцией является возможность зарядки мобильных телефонов и планшетов через встроенный USB-порт, находящий внутри каждой секции блока. Удобство и простота в использовании, возможность тарификации хранения за любые промежутки времени, а также дополнительная система механической разблокировки делают блоки локеров серии «LDL-06A» по-настоящему уникальным предложением на рынке.
+						+e.descr-item
+							+e.H5.descr-title Програмное обеспечение
+							+e.descr-text
+								p Сетевое кроссплатформенное серверное ПО, предназначенное для настройки и управления сетевыми локерами "Карддекс", по интерфейсам RS-485 (общая шина). Ethernet, WiFi.
+
+							+e.H6.descr-sub-title Основные особенности:
+							+e.UL.descr-list
+								li - Кроссплатформенность, запуск под операционными системами семейств Windows и Linux.
+								li - Сетевое ПО, не требующее клиентской части для подключения
+								li - Настройка и управление всеми выпускаемыми контроллерами локеров "Карддекс"
+								li - Возможность взаимодействия с облачным сервисом "Карддекс" для организации управления локерами
+								li - Запуск "локального" облака для организации управления локерами
+		//end product
+
+		//begin assort
+		+b.SECTION.assort
+			+e.container.container
+				+b.section-top.assort__section-top
+					+e.H6.label ДОПОЛНИТЕЛЬНАЯ
+					+e.H2.title.title Продукция
+
+				+e.slider.slider
+					+e.slider-item
+						+b.product-item.assort__item
+							+e.img-wrap
+								+e.IMG(src='img/content/product-img_sm-1.png' alt='image')
+							+e.H6.title Блоки персональных локеров серии «LS-02A»
+							+e.H5.price 23 050 руб
+							+e.content
+								+e.H6.title Блоки персональных локеров серии «LS-02A»
+								+e.H5.price 23 050 руб
+								+e.P.descr Блоки персональных автоматических шкафчиков-локеров серии «LS-02A» предназначены для коммерческого использования в образовательных учреждениях.
+								+e.P.descr
+									strong Комплектация:
+									= ' '
+									| блоки персональных автоматических шкафчиков-локеров серии «LS-02A»
+								+e.A.link.arr-link(href='#!')
+									span Смотреть в каталоге
+									.arrow-link__icon.icon-arr-sm
+
+					+e.slider-item
+						+b.product-item.assort__item
+							+e.img-wrap
+								+e.IMG(src='img/content/product-img_sm-2.png' alt='image')
+							+e.H6.title Блоки персональных локеров серии «LS-02A»
+							+e.H5.price 23 050 руб
+							+e.content
+								+e.H6.title Блоки персональных локеров серии «LS-02A»
+								+e.H5.price 23 050 руб
+								+e.P.descr Блоки персональных автоматических шкафчиков-локеров серии «LS-02A» предназначены для коммерческого использования в образовательных учреждениях.
+								+e.P.descr
+									strong Комплектация:
+									= ' '
+									| блоки персональных автоматических шкафчиков-локеров серии «LS-02A»
+								+e.A.link.arr-link(href='#!')
+									span Смотреть в каталоге
+									.arrow-link__icon.icon-arr-sm
+					+e.slider-item
+						+b.product-item.assort__item
+							+e.img-wrap
+								+e.IMG(src='img/content/product-img_sm-1.png' alt='image')
+							+e.H6.title Блоки персональных локеров серии «LS-02A»
+							+e.H5.price 23 050 руб
+							+e.content
+								+e.H6.title Блоки персональных локеров серии «LS-02A»
+								+e.H5.price 23 050 руб
+								+e.P.descr Блоки персональных автоматических шкафчиков-локеров серии «LS-02A» предназначены для коммерческого использования в образовательных учреждениях.
+								+e.P.descr
+									strong Комплектация:
+									= ' '
+									| блоки персональных автоматических шкафчиков-локеров серии «LS-02A»
+								+e.A.link.arr-link(href='#!')
+									span Смотреть в каталоге
+									.arrow-link__icon.icon-arr-sm
+
+					+e.slider-item
+						+b.product-item.assort__item
+							+e.img-wrap
+								+e.IMG(src='img/content/product-img_sm-2.png' alt='image')
+							+e.H6.title Блоки персональных локеров серии «LS-02A»
+							+e.H5.price 23 050 руб
+							+e.content
+								+e.H6.title Блоки персональных локеров серии «LS-02A»
+								+e.H5.price 23 050 руб
+								+e.P.descr Блоки персональных автоматических шкафчиков-локеров серии «LS-02A» предназначены для коммерческого использования в образовательных учреждениях.
+								+e.P.descr
+									strong Комплектация:
+									= ' '
+									| блоки персональных автоматических шкафчиков-локеров серии «LS-02A»
+								+e.A.link.arr-link(href='#!')
+									span Смотреть в каталоге
+									.arrow-link__icon.icon-arr-sm
+		//end assort
+
+		//begin contact
+		+b.SECTION.contact._product
+			+e.container.container
+				+e.block
+					+e.IMG.block-img(src='img/bg/contact_bg.png' alt='image')
+					+b.section-top.contact__section-top
+						+e.H6.label КОНТАКТЫ
+						+e.H2.title.title Оставьте ваш телефон
+						+e.P.descr И наш менеджер свяжется с вами на протяжении 3х минут
+
+					+e.FORM.form(action='#!' method='POST')
+						+b.form-field.contact__form-field
+							+e.INPUT.input(type='text' name='' placeholder='Телефон' required)
+						+b.form-field.contact__form-field
+							+e.INPUT.submit.btn._yellow(type='submit' value='Отправить')
+		//end contact

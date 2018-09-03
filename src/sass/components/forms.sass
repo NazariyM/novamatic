@@ -51,3 +51,57 @@
       +placeholder-color($white)
       &:focus
          border-bottom-color: #989898
+
+.select
+   display: flex
+   align-items: center
+   color: #4b5666
+   &__label
+      display: inline-block
+      vertical-align: middle
+      flex-shrink: 0
+      margin-right: 30px
+      font-size: 16px
+      letter-spacing: 0.32px
+   
+   .select2-container
+      font-size: 14px
+   &_lg
+      .select2-container
+         width: 296px!important
+   &_md
+      .select2-container
+         width: 213px!important
+   &_sm
+      .select2-container
+         width: 172px!important
+   &_xs
+      .select2-container
+         width: 127px!important
+   
+   .select2-container .select2-selection--single
+      height: 35px
+   
+   .select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single
+      border-radius: 0
+      border: 0
+      border-bottom: 2px solid rgba(#8d93a3, .3)
+   
+   .select2-container--classic .select2-selection--single .select2-selection__arrow b, .select2-container--default .select2-selection--single .select2-selection__arrow b
+      margin-left: -14px
+      border-width: 7px 5px 0
+      border-color: #1a1a1a transparent transparent
+   
+   .select2-container--open .select2-selection__arrow b
+      transform: scaleY(-1)
+   
+   .select2-container .select2-selection--single .select2-selection__rendered
+      padding-left: 20px
+      padding-right: 40px
+      
+   //.select2-hidden-accessible
+   //   display: none !important
+
+.select2-results
+   font-size: 14px !important
+   

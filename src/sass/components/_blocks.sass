@@ -231,6 +231,7 @@
    &__nav
       display: flex
       &-btn
+         position: relative
          display: flex
          align-items: center
          justify-content: center
@@ -250,4 +251,11 @@
             transform: scale(1.04,1.16)
             box-shadow: 0 14px 43px rgba(255, 201, 14, 0.33)
             background-color: $color-3
+            z-index: 1
             color: $white
+         &-icon
+            +trs
+            &:nth-child(2)
+               +vcenter
+            .is-active &:nth-child(2)
+               opacity: 0
